@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LatexDo - A focused desktop LaTeX editor</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/svg+xml" href="assets/icon.svg">
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">
+                <img src="assets/icon.svg" alt="LatexDo Logo" width="32" height="32">
+                <span>LatexDo</span>
+            </div>
+            <div class="nav-links">
+                <button id="theme-toggle" aria-label="Toggle Theme">
+                    <svg class="sun" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></svg>
+                    <svg class="moon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                </button>
+                <a href="https://github.com/latexdo/latexdo" target="_blank">GitHub</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero container fade-in">
+            <h1 class="gradient-text">Focused LaTeX Editing.</h1>
+            <p class="tagline">A modern desktop LaTeX editor with live PDF preview, built for speed and simplicity.</p>
+            <div class="cta-group">
+                <a href="https://github.com/latexdo/latexdo/releases" class="btn btn-primary">Download Releases</a>
+                <a href="https://github.com/latexdo/latexdo" class="btn btn-secondary">View Source</a>
+            </div>
+        </section>
+
+        <section class="features container fade-in">
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="icon">📄</div>
+                    <h3>Live Preview</h3>
+                    <p>See your changes instantly. High-performance PDF rendering side-by-side with your code.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">⚡</div>
+                    <h3>Modern Editor</h3>
+                    <p>Powered by Monaco, the core of VS Code. Enjoy syntax highlighting, folding, and smart editing.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">🚀</div>
+                    <h3>Fast Compilation</h3>
+                    <p>Uses <code>latexmk</code> to automatically handle dependencies and multiple compilation passes.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">💻</div>
+                    <h3>Cross Platform</h3>
+                    <p>Native desktop experience for macOS, Windows, and Linux built with Electron and React.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="requirements container fade-in">
+            <h2>Requirements</h2>
+            <ul>
+                <li><strong>Node.js:</strong> version 20 or newer.</li>
+                <li><strong>TeX Distribution:</strong> MacTeX (macOS), MiKTeX/TeX Live (Windows), or TeX Live (Linux).</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 LatexDo. Released under the MIT License.</p>
+        </div>
+    </footer>
+
+    <script>
+        const toggle = document.getElementById('theme-toggle');
+        const currentTheme = localStorage.getItem('theme') || 'light';
+        
+        document.documentElement.setAttribute('data-theme', currentTheme);
+
+        toggle.addEventListener('click', () => {
+            let theme = document.documentElement.getAttribute('data-theme');
+            let newTheme = theme === 'light' ? 'dark' : 'light';
+            
+            document.documentElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+        });
+    </script>
+</body>
+</html>
