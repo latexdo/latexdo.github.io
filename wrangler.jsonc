@@ -1,0 +1,20 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "latexdo",
+  "compatibility_date": "2026-06-27",
+  "assets": {
+    "directory": ".",
+    "not_found_handling": "404-page",
+    "exclude": [
+      "node_modules/**",
+      ".git/**",
+      ".github/**",
+      "src/**",
+      "package*.json",
+      "tsconfig.json",
+      "wrangler.jsonc",
+      "README.md",
+      "LICENSE"
+    ]
+  }
+}
