@@ -1058,6 +1058,19 @@ h3 {
   color: var(--muted);
 }
 
+.faq-list a {
+  color: var(--blue-strong);
+  font-weight: 760;
+}
+
+.faq-list code {
+  border-radius: 5px;
+  background: #edf2f7;
+  color: var(--ink-soft);
+  padding: 2px 5px;
+  font-size: 0.9em;
+}
+
 .site-footer {
   display: grid;
   grid-template-columns: minmax(220px, 1fr) auto auto;
@@ -1113,6 +1126,13 @@ h3 {
   padding: 72px 0 86px;
 }
 
+.legal-page {
+  width: min(900px, calc(100% - 32px));
+  min-height: calc(100vh - 142px);
+  margin: 0 auto;
+  padding: 72px 0 86px;
+}
+
 .downloads-hero {
   max-width: 760px;
   margin-bottom: 28px;
@@ -1123,11 +1143,53 @@ h3 {
   font-size: 70px;
 }
 
+.legal-page h1 {
+  margin: 8px 0 16px;
+  font-size: 64px;
+}
+
 .downloads-hero p,
+.legal-page p,
+.legal-page li,
 .downloads-empty p,
 .downloads-meta p {
   color: var(--muted);
   font-size: 18px;
+}
+
+.legal-document {
+  display: grid;
+  gap: 22px;
+  margin-top: 28px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  padding: 28px;
+  box-shadow: 0 12px 34px rgb(17 19 24 / 7%);
+}
+
+.legal-document section {
+  display: grid;
+  gap: 10px;
+}
+
+.legal-document h2 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.legal-document p,
+.legal-document ul {
+  margin: 0;
+}
+
+.legal-document ul {
+  padding-left: 22px;
+}
+
+.legal-document a {
+  color: var(--blue-strong);
+  font-weight: 760;
 }
 
 .downloads-grid {
@@ -1285,7 +1347,8 @@ h3 {
   }
 
   h2,
-  .downloads-hero h1 {
+  .downloads-hero h1,
+  .legal-page h1 {
     font-size: 34px;
   }
 

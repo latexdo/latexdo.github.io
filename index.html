@@ -86,26 +86,58 @@
             "mainEntity": [
               {
                 "@type": "Question",
-                "name": "Is LatexDo a web editor or desktop app?",
+                "name": "Do I need a GitHub account to download LatexDo?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "LatexDo has a web editor for instant writing and a desktop app for local LaTeX compilation, SyncTeX, PDF export, and project files."
+                  "text": "No. LatexDo publishes direct downloads, checksums, and update metadata on the LatexDo downloads page at latexdo.org/downloads/."
                 }
               },
               {
                 "@type": "Question",
-                "name": "Can I download LatexDo without a GitHub account?",
+                "name": "What is the difference between the web editor and the desktop app?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Yes. LatexDo desktop installers are published directly on the LatexDo downloads page at latexdo.org/downloads/."
+                  "text": "The web editor is the fastest way to start writing in the browser. The desktop app is for local project files, local LaTeX compilation, PDF preview, diagnostics, and export workflows."
                 }
               },
               {
                 "@type": "Question",
-                "name": "Does LatexDo work with real LaTeX projects?",
+                "name": "Can LatexDo open an existing LaTeX project?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Yes. The desktop app opens local project folders, edits .tex and .bib files, compiles with latexmk, reads PDFs, and connects diagnostics to source lines."
+                  "text": "Yes. LatexDo is designed for real projects with .tex and .bib files, local folders, PDF output, citations, diagnostics, and review work."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Does compilation happen locally?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Desktop compilation uses your local TeX toolchain, such as MacTeX, MiKTeX, or TeX Live with latexmk, so you keep the same build environment you use from the terminal."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What does the LatexDo CLI do?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "The CLI caches the LatexDo source, installs npm dependencies when needed, starts the local web editor, and opens the localhost URL in your browser."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Which desktop platforms are planned for direct downloads?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "The downloads page is set up for macOS Apple Silicon, macOS Intel, and Windows installers. If a build is not listed yet, it is still being prepared by the release workflow."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Where can I get help or report a problem?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "You can email contact@latexdo.org or open an issue in the LatexDo GitHub repository."
                 }
               }
             ]
@@ -501,32 +533,64 @@ and review work together.
         <div class="section-inner narrow">
           <div class="section-heading reveal">
             <p class="eyebrow">Questions</p>
-            <h2 id="faq-title">Answers for writers, reviewers, and maintainers.</h2>
+            <h2 id="faq-title">Practical answers before you start.</h2>
           </div>
           <div class="faq-list">
             <details class="reveal" open>
-              <summary>Can people download LatexDo without a GitHub account?</summary>
+              <summary>Do I need a GitHub account to download LatexDo?</summary>
               <p>
-                Yes. The public downloads page hosts installers, checksums, and the
-                update manifest directly on the LatexDo website.
+                No. The downloads page hosts direct installers, checksums, and update
+                metadata on the LatexDo website.
               </p>
             </details>
             <details class="reveal">
               <summary>
-                Is the web editor the same ecosystem as the desktop app?
+                What is the difference between the web editor and the desktop app?
               </summary>
               <p>
-                Yes. The hosted editor is the fast entry point, while the desktop app
-                handles local compilation, PDF export, terminal access, and project
-                files.
+                The web editor is the fastest way to start writing in the browser. The
+                desktop app is for local project folders, local LaTeX compilation, PDF
+                preview, diagnostics, and export workflows.
               </p>
             </details>
             <details class="reveal">
-              <summary>Who is LatexDo for?</summary>
+              <summary>Can LatexDo open an existing LaTeX project?</summary>
               <p>
-                Researchers, students, technical writers, reviewers, and anyone who
-                wants a focused LaTeX workflow for source, PDFs, citations, and
-                rebuttals.
+                Yes. LatexDo is designed for real projects with <code>.tex</code> and
+                <code>.bib</code> files, local folders, PDF output, citations,
+                diagnostics, and review work.
+              </p>
+            </details>
+            <details class="reveal">
+              <summary>Does compilation happen locally?</summary>
+              <p>
+                In the desktop app, yes. LatexDo uses your local TeX toolchain, such
+                as MacTeX, MiKTeX, or TeX Live with <code>latexmk</code>, so your
+                builds stay close to your terminal workflow.
+              </p>
+            </details>
+            <details class="reveal">
+              <summary>What does the LatexDo CLI do?</summary>
+              <p>
+                The CLI caches the LatexDo source, installs npm dependencies when
+                needed, starts the local editor, and opens the localhost URL in your
+                browser.
+              </p>
+            </details>
+            <details class="reveal">
+              <summary>Which desktop platforms are planned for direct downloads?</summary>
+              <p>
+                The downloads page is set up for macOS Apple Silicon, macOS Intel,
+                and Windows installers. If a build is not listed yet, it is still
+                being prepared by the release workflow.
+              </p>
+            </details>
+            <details class="reveal">
+              <summary>Where can I get help or report a problem?</summary>
+              <p>
+                Email <a href="mailto:contact@latexdo.org">contact@latexdo.org</a> or
+                open an issue in the
+                <a href="https://github.com/latexdo/latexdo">LatexDo repository</a>.
               </p>
             </details>
           </div>
@@ -548,6 +612,9 @@ and review work together.
         <a href="https://github.com/latexdo/latexdo-cli">CLI</a>
         <a href="downloads/">Downloads</a>
         <a href="https://github.com/latexdo/latexdo">Source</a>
+        <a href="terms.html">Terms of Use</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="mailto:contact@latexdo.org">Contact us</a>
         <a href="sitemap.xml">Sitemap</a>
       </nav>
       <span id="copyright"></span>
