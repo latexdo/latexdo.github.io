@@ -4,7 +4,7 @@
 
 LatexDo is a modern, lightweight LaTeX environment built with Electron and React. It's designed for writers who want a distraction-free experience with instant visual feedback.
 
-[**🌐 Visit Website**](https://latexdo.github.io) | [**📦 Download Releases**](https://github.com/latexdo/latexdo/releases)
+[**🌐 Visit Website**](https://latexdo.org) | [**📦 Download Releases**](https://latexdo.org/downloads/)
 
 ---
 
