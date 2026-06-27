@@ -279,13 +279,16 @@ function initEditorDemo() {
             setText("#section-count", String(sectionsFromSource(source).length));
             compileButton.disabled = false;
             const hasError = diagnostics.some((item) => item.type === "error");
-            setStatus(hasError ? "Preview built with one fixable error." : "Preview built. Desktop compilation is available in the app.", hasError ? "error" : "ok");
+            setStatus(hasError
+                ? "Preview built with one fixable error."
+                : "Preview built. Desktop compilation is available in the app.", hasError ? "error" : "ok");
         }, 280);
     };
     const insertAtCursor = (text) => {
         const start = sourceEditor.selectionStart;
         const end = sourceEditor.selectionEnd;
-        sourceEditor.value = sourceEditor.value.slice(0, start) + text + sourceEditor.value.slice(end);
+        sourceEditor.value =
+            sourceEditor.value.slice(0, start) + text + sourceEditor.value.slice(end);
         sourceEditor.focus();
         sourceEditor.setSelectionRange(start + text.length, start + text.length);
         updateLines();
