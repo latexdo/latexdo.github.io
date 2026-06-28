@@ -37,10 +37,11 @@ npm run typecheck  # Check TypeScript without emitting files.
 Deploy the site to Cloudflare Workers assets:
 
 ```sh
+npm run build
 npx wrangler deploy
 ```
 
-The Wrangler config publishes static files from the repository root and excludes development-only files. In non-interactive environments, set `CLOUDFLARE_API_TOKEN` before deploying.
+The Wrangler config publishes static files from the repository root. `_redirects` defines host redirects, and `.assetsignore` keeps development-only files out of the asset upload. In non-interactive environments, set `CLOUDFLARE_API_TOKEN` before deploying.
 
 ## Source Sync
 

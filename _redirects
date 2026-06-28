@@ -1,0 +1,6 @@
+/docs https://docs.latexdo.org/ 301
+/docs/ https://docs.latexdo.org/ 301
+/docs/* https://docs.latexdo.org/:splat 301
+/editor https://editor.latexdo.org/ 301
+/editor/ https://editor.latexdo.org/ 301
+/editor/* https://editor.latexdo.org/:splat 301
