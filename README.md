@@ -1,27 +1,53 @@
-# 📄 LatexDo
+# latexdo.org
 
-**A focused desktop LaTeX editor**
+This repository hosts the public LatexDo website at `https://latexdo.org`. It includes the marketing pages, downloads metadata, update metadata, legal pages, and the shell installer endpoint.
 
-LatexDo is a modern, lightweight LaTeX environment built with Electron and React. It's designed for writers who want a distraction-free experience with instant visual feedback.
+## Repository Role
 
-[**🌐 Visit Website**](https://latexdo.org) | [**📦 Download Releases**](https://latexdo.org/downloads/)
+- Serves the public website and download pages.
+- Publishes `install.sh` and `bin/latexdo` for CLI installation.
+- Hosts update metadata under `updates/` and release metadata under `downloads/`.
+- Receives most source updates from `/Users/omar/Desktop/Github/latexdo/website`.
 
----
+## Requirements
 
-### ✨ Key Features
+- Node.js 20 or newer.
+- npm.
+- Wrangler for Cloudflare deploys through `npx wrangler`.
 
-*   **Live Preview:** High-performance side-by-side PDF rendering.
-*   **Modern Editor:** Powered by Monaco (VS Code engine) with full syntax support.
-*   **Fast Build:** Automated multi-pass compilation using `latexmk`.
-*   **Native Desktop:** Smooth performance on macOS, Windows, and Linux.
+## Run Locally
 
-### 🛠️ Requirements
+```sh
+npm install
+npm run build
+python3 -m http.server 4173
+```
 
-- **Node.js 20+**
-- **TeX Distribution:** MacTeX, MiKTeX, or TeX Live (with `latexmk`)
+Open `http://127.0.0.1:4173`. The build compiles `src/site.ts` into `assets/site.js`.
 
----
+## Common Commands
 
-<p align="center">
-  Built with ❤️ by the LatexDo Team.
-</p>
+```sh
+npm run build      # Compile website TypeScript.
+npm run typecheck  # Check TypeScript without emitting files.
+```
+
+## Deploy
+
+Deploy the site to Cloudflare Workers assets:
+
+```sh
+npx wrangler deploy
+```
+
+The Wrangler config publishes static files from the repository root and excludes development-only files. In non-interactive environments, set `CLOUDFLARE_API_TOKEN` before deploying.
+
+## Source Sync
+
+Most website files are generated from the main app repo. To refresh this repo from local source, run this in `/Users/omar/Desktop/Github/latexdo`:
+
+```sh
+npm run sync:downstream
+```
+
+The sync script intentionally preserves this repo's `README.md`, `LICENSE`, `.nojekyll`, and `wrangler.jsonc`.
