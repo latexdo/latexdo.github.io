@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Download the latest LatexDo desktop release from the LatexDo website. Installer files are stored in GitHub Releases and indexed here for updates."
+      content="Download the latest LatexDo desktop installers from v0.1.0, or inspect every release tag published for macOS and Windows."
     />
     <title>LatexDo Downloads</title>
     <link rel="canonical" href="https://latexdo.org/downloads/" />
@@ -24,7 +24,7 @@
           <a href="../">Home</a>
           <a href="../about/">About</a>
           <a href="manifest.json">Manifest</a>
-          <a href="SHA256SUMS.txt">Checksums</a>
+          <a href="releases.json">Releases JSON</a>
         </div>
       </nav>
     </header>
@@ -33,14 +33,11 @@
       <section class="downloads-hero">
         <p class="eyebrow">Direct downloads</p>
         <h1>LatexDo Downloads</h1>
-        <p>Download the latest LatexDo desktop release from the LatexDo website. Installer files are stored in GitHub Releases and indexed here for updates.</p>
-        <p>
-          Permanent downloads for this release are available at
-          <a href="v0.1.0/">v0.1.0</a>.
-        </p>
+        <p>Download the latest LatexDo desktop installers from v0.1.0, or inspect every release tag published for macOS and Windows.</p>
+        <p>Latest tag: <a href="v0.1.0/">v0.1.0</a>.</p>
       </section>
 
-      <section class="downloads-grid" aria-label="LatexDo installers">
+      <section class="downloads-grid" aria-label="Latest LatexDo installers">
 
           <article class="download-card">
             <div>
@@ -71,7 +68,7 @@
       </section>
 
       <section class="downloads-meta">
-        <h2>Build information</h2>
+        <h2>Latest build information</h2>
         <dl>
           <div>
             <dt>Version</dt>
@@ -87,10 +84,35 @@
           </div>
         </dl>
         <p>
-          For automated checks, use <a href="manifest.json">manifest.json</a>.
-          For file verification, use <a href="SHA256SUMS.txt">SHA256SUMS.txt</a>.
+          For automated checks, use <a href="manifest.json">manifest.json</a>,
+          <a href="releases.json">releases.json</a>, and
+          <a href="SHA256SUMS.txt">SHA256SUMS.txt</a>.
         </p>
       </section>
+
+        <section class="downloads-releases" aria-labelledby="release-history-title">
+          <div class="release-heading">
+            <div>
+              <p class="eyebrow">Release tags</p>
+              <h2 id="release-history-title">All desktop releases</h2>
+            </div>
+            <a class="button secondary" href="releases.json">JSON index</a>
+          </div>
+          <div class="release-list">
+            <article class="release-item">
+              <div>
+                <h3><a href="v0.1.0/">v0.1.0</a></h3>
+                <p>Version 0.1.0 - Jul 2, 2026, 3:06 PM UTC - 8839db3b8cef</p>
+              </div>
+              <nav aria-label="v0.1.0 release links">
+                <a href="v0.1.0/">Downloads</a>
+                <a href="v0.1.0/manifest.json">Manifest</a>
+                <a href="v0.1.0/SHA256SUMS.txt">Checksums</a>
+                <a href="https://github.com/latexdo/latexdo/releases/tag/v0.1.0">GitHub</a>
+              </nav>
+            </article>
+          </div>
+        </section>
     </main>
 
     <footer class="site-footer">
